@@ -1,2 +1,3 @@
 #pragma once
-char* analyzeTriangle(int side1, int side2, int side3);
+char* analyzeTriangle(float side1, float side2, float side3);
+float area,R, s, pi, A, B, C;
