@@ -34,3 +34,4 @@ char* analyzeTriangle(float side1, float side2, float side3)
 
 	return result;
 }
+
