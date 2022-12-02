@@ -16,7 +16,7 @@ char* analyzeTriangle(float side1, float side2, float side3)
 	}
 	else if ((side1 == side2 && side1 != side3) || (side1 == side3 && side1 != side2))
 	{
-		result = "Isosceles triangle";
+		result = "Isosceles triangle"; 
 	}
 	else 
 	{

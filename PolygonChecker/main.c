@@ -25,8 +25,20 @@ int main() {
 			printf_s("%s\n", result);
 			break;
 		case 2:
-				//Execute functions related to Rectangle
-			printf("	Replace this message with rectangle's functions\n");
+			 
+			printf("\n	Rectangle selected.\n");
+			double  pointX[4] = {0,0,0,0}, pointY[4] = {0,0,0,0};
+			GetPointsFromUser(pointX,pointY);
+			bool IsRectangle = 	validCoordinates(pointX,pointY); 
+			if (IsRectangle) {
+				printf("	Points Entered shape a rectangle\n");
+				printf("	    Rectangle Area is  : %f \n", findArea(pointX, pointY));
+			}
+			else {
+				printf("	Points Entered don't shape a rectangle\n");
+			}
+				printf("	    Perimeter is       : %f \n", findPerimeter(pointX, pointY));
+	
 			break;
 		case 0:
 			continueProgram = false;
