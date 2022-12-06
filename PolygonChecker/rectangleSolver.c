@@ -107,12 +107,6 @@ bool validCoordinates(double* X, double* Y)
 	
 	orderCoordinates(X, Y);	//function to order coordinates
 
-	/*
-	printf("\nPoints in order :\n");
-	for (int i = 0; i < NUMBERPOINTS; i++)
-		printf("Point: %d , (%f,%f) \n",i+1, X[i], Y[i]);
-	*/
-
 	return IsRectangle;
 }
 

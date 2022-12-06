@@ -23,6 +23,8 @@ int main() {
 			//printf_s("! %d\n", triangleSidesPtr[0]);
 			char* result = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
 			printf_s("%s\n", result);
+			//Angles
+			angleTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
 			break;
 		case 2:
 			 
@@ -63,7 +65,7 @@ int printShapeMenu() {
 	printf_s("1. Triangle\n");
 	printf_s("2. Rectangle\n");
 	printf_s("0. Exit\n");
-
+	
 	int shapeChoice;
 
 	printf_s("Enter number: ");
