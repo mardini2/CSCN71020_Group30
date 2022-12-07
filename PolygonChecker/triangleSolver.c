@@ -28,8 +28,8 @@ char* analyzeTriangle(int side1, int side2, int side3)
 	return result;
 }
 
-/*******************************/
-void angleTriangle(int side1, int side2, int side3)
+
+int angleTriangle(int side1, int side2, int side3)
 {
 	char  result[100]="";
 	double pi, A=0, B = 0, C = 0;		//A --> side 1, B --> side 2 , C --> side 3 
@@ -43,7 +43,7 @@ void angleTriangle(int side1, int side2, int side3)
 	else {
 
 		//The Law of Cosines
-		pi = (float)acos(-1);
+		pi = acos(-1);
 	
 		A = (pow(side2, 2) + pow(side3, 2) - pow(side1, 2)) / (2 * side2 * side3);
 		B = (pow(side1, 2) + pow(side3, 2) - pow(side2, 2)) / (2 * side1 * side3);
@@ -59,5 +59,6 @@ void angleTriangle(int side1, int side2, int side3)
 	}
 	printf("%s\n", result);
 
+	return 1;
 }
 

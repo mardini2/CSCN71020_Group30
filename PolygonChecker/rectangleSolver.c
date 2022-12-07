@@ -116,10 +116,10 @@ double findPerimeter(double* X, double* Y)
 {
 	double P = 0,distanceP1P2 = 0, distanceP2P3 = 0, distanceP3P4 = 0, distanceP4P1 = 0;
 
-	distanceP1P2 = sqrt((pow((X[1] - X[0]), 2) + pow((Y[1] - Y[0]), 2)));
-	distanceP2P3 = sqrt((pow((X[2] - X[1]), 2) + pow((Y[2] - Y[1]), 2)));
-	distanceP3P4 = sqrt((pow((X[3] - X[2]), 2) + pow((Y[3] - Y[2]), 2)));
-	distanceP4P1 = sqrt((pow((X[0] - X[3]), 2) + pow((Y[0] - Y[3]), 2)));
+	distanceP1P2 = sqrt(( pow((X[1] - X[0]), 2) + pow((Y[1] - Y[0]), 2)));
+	distanceP2P3 = sqrt(( pow((X[2] - X[1]), 2) + pow((Y[2] - Y[1]), 2)));
+	distanceP3P4 = sqrt(( pow((X[3] - X[2]), 2) + pow((Y[3] - Y[2]), 2)));
+	distanceP4P1 = sqrt(( pow((X[0] - X[3]), 2) + pow((Y[0] - Y[3]), 2)));
 	 
 	P  = distanceP1P2 + distanceP2P3 + distanceP3P4 + distanceP4P1;
 	return P;
