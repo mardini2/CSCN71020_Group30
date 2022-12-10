@@ -8,7 +8,7 @@ extern "C" char* analyzeTriangle(int, int, int);
 extern "C" bool validCoordinates(double*, double*);
 extern "C" double findPerimeter(double*, double*);
 extern "C" double findArea(double*, double*);
-
+extern "C" void orderCoordinates(double* X, double* Y);
 
 namespace UnitTest
 {
@@ -42,6 +42,28 @@ namespace UnitTest
 			Assert::AreEqual(true, result);
 
 		}
+		TEST_METHOD(OrderPoints)
+		{
+
+			// This is testing the function orderCoordinates 
+			// using two array X[1,1,11,11 ] and Y [2,8,2,8] which represent 4 points(X,Y), 
+			// it should return points in order: X[] = { 1,11,11,1 }, Y[] = { 2,2,8,8 };
+			double X[] = { 1,1,11,11 }, Y[] = { 2,8,2,8 };
+			orderCoordinates(X, Y);
+			Assert::AreEqual(1.0, X[0]);
+			Assert::AreEqual(2.0, Y[0]);
+
+			Assert::AreEqual(11.0, X[1]);
+			Assert::AreEqual(2.0, Y[1]);
+
+			Assert::AreEqual(11.0, X[2]);
+			Assert::AreEqual(8.0, Y[2]);
+
+			Assert::AreEqual(1.0, X[3]);
+			Assert::AreEqual(8.0, Y[3]);
+
+		}
+
 		TEST_METHOD(Perimeter)
 		{
 			// This is testing the function findPerimeter 
