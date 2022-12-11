@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "triangleSolver.h"
 
+
 char* analyzeTriangle(int side1, int side2, int side3)
 {
 	char* result = "";
@@ -29,16 +30,16 @@ char* analyzeTriangle(int side1, int side2, int side3)
 }
 
 
-int angleTriangle(int side1, int side2, int side3)
+char* angleTriangle(int side1, int side2, int side3)
 {
 	char  result[100]="";
 	double pi, A=0, B = 0, C = 0;		//A --> side 1, B --> side 2 , C --> side 3 
-
+	char* angles = "";
 
 	if (side1 <= 0 || side2 <= 0 || side3 <= 0)
 	{
 		int output_len1 = snprintf(result, 100, "   Not a triangle, it is not possible determines angles\0");
-
+		angles = result;
 	}
 	else {
 
@@ -55,9 +56,10 @@ int angleTriangle(int side1, int side2, int side3)
 
 
 		int output_len2 = snprintf(result, 100, "   Inside Angles, Side 1's Angle: %6.2f , Side 2's Angle: %6.2f , Side 3's Angle: %6.2f\0", A, B, C);
-
+		angles = result;
 	}
-	printf("%s\n", result);
+	printf("%s\n", angles);
+	
 
-	return 1;
+	return angles;
 }

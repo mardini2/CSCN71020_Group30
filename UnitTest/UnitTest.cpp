@@ -4,7 +4,7 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 extern "C" char* analyzeTriangle(int, int, int);
-
+extern "C" char* angleTriangle(int, int, int);
 extern "C" bool validCoordinates(double*, double*);
 extern "C" double findPerimeter(double*, double*);
 extern "C" double findArea(double*, double*);
@@ -23,6 +23,14 @@ namespace UnitTest
 			char* result = "";
 			result = analyzeTriangle(8, 7, 6);
 			Assert::AreEqual("   Scalene triangle", result);
+		}
+		TEST_METHOD(Angle)
+		{
+			// This is testing the function angleTriangle 
+			// using sides of triangle 4 4 4, it should return "Inside Angles, Side 1's Angle:  60.00 , Side 2's Angle:  60.00 , Side 3's Angle:  60.00"
+			char* angles = "";
+			angles = angleTriangle(4, 4, 4);
+			Assert::AreEqual("Inside Angles, Side 1's Angle:  60.00 , Side 2's Angle:  60.00 , Side 3's Angle:  60.00", angles);
 		}
 	};
 
